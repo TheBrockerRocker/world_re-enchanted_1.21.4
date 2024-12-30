@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "reenchanted_world",
+	"version": "${version}",
+	"name": "world re-enchanted",
+	"description": "Just give you world an enchanteded spark!",
+	"authors": [
+		"The Brocker Rocker",
+		"creeper"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "ARR",
+	"icon": "assets/reenchanted_world/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.brocker.reenchanted_world.WorldReenchanted"
+		],
+		"client": [
+			"net.brocker.reenchanted_world.WorldReenchantedClient"
+		],
+		"fabric-datagen": [
+			"net.brocker.reenchanted_world.WorldReenchantedDataGenerator"
+		]
+	},
+	"mixins": [
+		"reenchanted_world.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
