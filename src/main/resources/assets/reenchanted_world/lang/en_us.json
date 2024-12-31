@@ -1,3 +1,5 @@
 {
-  "item.reenchanted_world.pink_carrot": "Pink Carrot"
+  "item.reenchanted_world.pink_carrot": "Pink Carrot",
+
+  "itemGroup.world_reenchanted_tab": "World Reenchanted"
 }

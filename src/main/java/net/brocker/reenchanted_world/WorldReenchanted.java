@@ -1,5 +1,6 @@
 package net.brocker.reenchanted_world;
 
+import net.brocker.reenchanted_world.items.ModItemGroup;
 import net.brocker.reenchanted_world.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -16,6 +17,7 @@ public class WorldReenchanted implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroup.registerModItemGroups();
 		ModItems.registerModItems();
 
 		LOGGER.info("Hello Fabric world!");
