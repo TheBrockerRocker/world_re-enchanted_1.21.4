@@ -5,6 +5,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
+import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -32,7 +34,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("GGG")
                         .input('G', Items.GOLD_INGOT)
                         .input('C', Items.CARROT)
+                        .criterion(hasItem(Items.CARROT), conditionsFromItem((Items.CARROT)))
                         .offerTo(exporter);
+
+//                ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.PINK_CARROT)
+//                        .input('G', Items.GOLD_INGOT).input('C', Items.CARROT)
+//                        .pattern("GGG")
+//                        .pattern("GCG")
+//                        .pattern("GGG")
+//                        .criterion(hasItem(Items.CARROT), conditionsFromItem(Items.CARROT))
+//                        .offerTo(exporter);
             }
         };
     }
