@@ -2,10 +2,11 @@ package net.brocker.reenchanted_world.blocks;
 
 import net.brocker.reenchanted_world.WorldReenchanted;
 import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.BlockSetType;
-import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.block.Block;
 
 public class ModBlocks {
+
+    public static final BlockSet SPEED_BLOCK = new BlockSet("speed_block", AbstractBlock.Settings.create().velocityMultiplier(2f));
 
     // public static final BlockSet EXAMPLE_BLOCK = new BlockSet(
     //         "example_block",
