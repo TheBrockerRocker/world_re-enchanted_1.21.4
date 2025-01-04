@@ -6,7 +6,9 @@ import net.minecraft.block.Block;
 
 public class ModBlocks {
 
-    public static final BlockSet SPEED_BLOCK = new BlockSet("speed_block", AbstractBlock.Settings.create().velocityMultiplier(2f));
+    public static final BlockSet SPEED_BLOCK = new BlockSet("speed_block",
+            AbstractBlock.Settings.create().strength(1f,4).velocityMultiplier(2f)).addSlab();
+
 
     // public static final BlockSet EXAMPLE_BLOCK = new BlockSet(
     //         "example_block",
